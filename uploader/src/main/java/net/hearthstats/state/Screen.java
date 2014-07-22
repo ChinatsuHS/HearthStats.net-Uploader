@@ -210,6 +210,21 @@ public enum Screen {
                     Pixel.MATCH_STARTINGHAND_R
             )),
 
+    MATCH_NAXXRAMAS (
+            "Playing",
+            ScreenGroup.MATCH_PLAYING,
+            EnumSet.of(
+                    Pixel.MATCH_NAXXRAMAS_B,
+                    Pixel.MATCH_NAXXRAMAS_C,
+                    Pixel.MATCH_NAXXRAMAS_K,
+                    Pixel.MATCH_NAXXRAMAS_L
+            ),
+            EnumSet.of(
+                    Pixel.MATCH_NAXXRAMAS_D,
+                    Pixel.MATCH_NAXXRAMAS_E,
+                    Pixel.MATCH_NAXXRAMAS_R
+            )),
+
     MATCH_ORGRIMMAR (
             "Playing",
             ScreenGroup.MATCH_PLAYING,
@@ -409,10 +424,18 @@ public enum Screen {
         );
 
         MATCH_STARTINGHAND.nextScreens = EnumSet.of(
+                Screen.MATCH_NAXXRAMAS,
                 Screen.MATCH_ORGRIMMAR,
                 Screen.MATCH_PANDARIA,
                 Screen.MATCH_STORMWIND,
                 Screen.MATCH_STRANGLETHORN
+        );
+
+        MATCH_NAXXRAMAS.nextScreens = EnumSet.of(
+                Screen.MATCH_ORGRIMMAR_END,       // End screens for Naxxramas is currently unknown,
+                Screen.MATCH_PANDARIA_END,        // so other end screens are being used here as
+                Screen.MATCH_STORMWIND_END,       // a placeholder.
+                Screen.MATCH_STRANGLETHORN_END
         );
 
         MATCH_ORGRIMMAR.nextScreens = EnumSet.of(
@@ -431,7 +454,7 @@ public enum Screen {
                 Screen.MATCH_STRANGLETHORN_END
         );
 
-        MATCH_ORGRIMMAR_END.nextScreens = EnumSet.of(
+        EnumSet<Screen> afterMatchScreens = EnumSet.of(
                 Screen.MAIN,
                 Screen.PLAY_LOBBY,
                 Screen.PRACTICE_LOBBY,
@@ -440,9 +463,10 @@ public enum Screen {
                 Screen.ARENA_END
         );
 
-		MATCH_PANDARIA_END.nextScreens = MATCH_ORGRIMMAR_END.nextScreens;
-		MATCH_STORMWIND_END.nextScreens = MATCH_ORGRIMMAR_END.nextScreens;
-		MATCH_STRANGLETHORN_END.nextScreens = MATCH_ORGRIMMAR_END.nextScreens;
+        MATCH_ORGRIMMAR_END.nextScreens = afterMatchScreens;
+        MATCH_PANDARIA_END.nextScreens = afterMatchScreens;
+        MATCH_STORMWIND_END.nextScreens = afterMatchScreens;
+        MATCH_STRANGLETHORN_END.nextScreens = afterMatchScreens;
 
     }
 

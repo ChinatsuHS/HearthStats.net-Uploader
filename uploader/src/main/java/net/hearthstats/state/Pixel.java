@@ -114,6 +114,14 @@ public enum Pixel {
     MATCH_STARTINGHAND_Q    (Q,  10,  13,  19,  38,  48,  71),
     MATCH_STARTINGHAND_R    (R,  15,  13,   0,  38,  42,  25),
 
+    MATCH_NAXXRAMAS_B       (B,  23,  25,   3,  88,  75,  52),  // Based on image released to media only, not confirmed
+    MATCH_NAXXRAMAS_C       (C,  16,   6,   5,  63,  75,  52),  // Based on image released to media only, not confirmed
+    MATCH_NAXXRAMAS_D       (D,  16,   6,   5,  63,  75,  52),  // Based on image released to media only, not confirmed
+    MATCH_NAXXRAMAS_E       (E,  98,  10,   3, 138,  50,  38),  // Based on image released to media only, not confirmed
+    MATCH_NAXXRAMAS_R       (R,  12,   6,   2,  52,  46,  34),  // Based on image released to media only, not confirmed
+    MATCH_NAXXRAMAS_L       (L,   2,  21,   2,  73,  61,  77),  // Based on image released to media only, not confirmed
+    MATCH_NAXXRAMAS_K       (K,  21,  10,  14,  51,  40,  44),  // Based on image released to media only, not confirmed
+
     MATCH_ORGRIMMAR_B       (B, 136,  39,  24, 160,  60,  46),
     MATCH_ORGRIMMAR_C       (C, 122,  54,  15, 142,  77,  39),
     MATCH_ORGRIMMAR_D       (D, 117,  54,  21, 140,  75,  44),
